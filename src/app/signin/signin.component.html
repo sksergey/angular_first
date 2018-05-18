@@ -1,3 +1,24 @@
-<p>
-  signin works!
-</p>
+<div class="container">
+  <h1>Signin form</h1>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="email">email</label>
+      <input type="text" class="form-control" id="email" required >
+      ---{{model.email}}
+      <!--<div [hidden]="email.valid" class="alert alert-danger">-->
+        <!--Name is required-->
+      <!--</div>-->
+    </div>
+
+    <div class="form-group">
+      <label for="password">password</label>
+      <input type="text" class="form-control" id="password" required minlength="4" >
+      ---{{model.password}}
+
+    </div>
+
+    <button type="submit" class="btn btn-success">Signin</button>
+
+  </form>
+</div>
+
