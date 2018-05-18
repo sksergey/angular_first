@@ -1,0 +1,18 @@
+<p>
+  users works!
+</p>
+
+<!--<div>-->
+  <!--<label>email:-->
+    <!--<input [(ngModel)]="user.email" placeholder="email">-->
+  <!--</label>-->
+<!--</div>-->
+
+<h2>users list</h2>
+<ul class="users">
+  <li *ngFor="let user of users" (click)="onSelect(user)" [class.selected]="user === selectedUser">
+    <span class="badge">{{user.email}}</span> {{user.password}}
+  </li>
+</ul>
+
+<app-user-detail [user]="selectedUser"></app-user-detail>
